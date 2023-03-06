@@ -1,0 +1,130 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Pratham Prasoon',
+  date: '2021-06-07',
+  title: 'Neural networks that make your video games run better',
+  description:
+    'State of the art neural networks that enchance the visual quality of video games.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+### Introduction
+
+Look at these pictures.
+
+Both have ~2 million pixels, except one had only 921,600 to begin with and was then upscaled by machine learning model to match the resolution of the other.
+
+Can you guess which one is which?
+
+#### Image 1
+![native](images/native.jpg)
+
+#### Image 2
+![upscaled](images/upscaled.jpg)
+
+
+### A brief history of video games
+
+Before we get to those images, we need to talk a bit about video games.
+
+Over the years video games have started to look so realistic and high quality that they've become very computationally intensive.
+
+In simple words you need a **lot** of processing power to play modern games.
+
+#### Here's what a game from 1998 looks like.
+
+![Doom 1998](images/oldgame.png)
+
+#### ...and here's one from 2020.
+
+![Cyberpunk 2020](images/moderngame.jpg)
+
+The textures, lighting(ray tracing) and graphics in general are just so much better and life like.
+
+It's becoming hard to tell apart reality from these games, but unfortunately these all these realistic graphics come at a cost of needing to have really high-end hardware.
+
+### How games are rendered
+
+Here's a short video how on 3-D graphics are rendered 👇
+
+{/* {{< youtube cvcAjgMUPUA >}} */}
+
+#### tl;dr
+
+3-D objects in the games are rendered by a game 'engine' so that you can view them on your flat 2-D screen frame by frame.
+
+These frames are played one after the other in quick succession in order to run the game.
+
+Rendering each of these frames takes some time by the GPU (Graphics Processing Unit).
+
+The faster a GPU is the more frames you can render and smoother the game looks.
+
+### The problem
+
+There are 2 things at play here that determine how long it takes to render a frame that you can tweak:
+
+- The graphics 
+- The resolution (how many pixels are rendered)
+
+You basically have a trade off to make here, better looking game, or smoother game.
+
+Or maybe you don't?
+
+Well the graphics determines how the lighting, textures and all that stuff looks like, that is something we cannot enhance using machine learning.
+
+![Different graphic presets](images/graphicpresets.jpg)
+
+But the resolution is where it gets interesting...
+
+### Deep learning for the win!
+
+The more pixels you have in a frame the sharper it is going to look and renders slowly, on the contrary the image looks pixelated and renders quickly when the resolution is lowered.
+
+![Different Resolutions](images/resolutions.jpg)
+
+#### Say hello to DLSS
+
+Nvidia's DLSS( Deep Learning Super Sampling) is a technology that allows you to render the frames a lower resolution then upscale it with a deep learning model.
+
+This means 2 things, the frames will render quickly (smoother gameplay) and will look sharp.
+
+Nvidia's DLSS (Deep Learning Super Sampling) does exactly just that.
+
+It is a neural network that is trained on 16K images (**a VERY high resolution**) and essentially has the ability to fill in pixels and increase the sharpness of an image.
+
+![architecture](images/architecture.jpg)
+
+[More here](https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-2-0-a-big-leap-in-ai-rendering/)
+
+
+### Tensor Cores
+
+In order to perform these machine learning upscaling techniques, RTX series of GPUs have specialised "Tensor" cores, my RTX 3070 has 184 of these.
+
+What's happening here is:
+1. Game is rendered at a lower resolution 
+2. Then upscaled using DLSS.
+
+Which results in...
+
+> Smooth gameplay + High resolution
+
+### The results
+
+Now finally answering the orignal question, the first image was rendered natively at 1080p, while the second image was rendered at 720p and then upscaled by DLSS.
+
+They're _almost_ indistinguishable and the game runs buttery smooth. You'll notice some differences if you zoom in and look at hair and the detail in the rocks.
+
+But considering the model had to generate **~1 million new pixels**, this is an extraordinary result, honestly feels like black magic.
+
+These images are from a game called [control](https://en.wikipedia.org/wiki/Control_(video_game)) and here's the performance, FPS stands for frames per second.
+
+The higher this number, the smoother the game is and you can see the results on these GPUs, this is exciting.
+
+![Stats](images/stats.png)
+
+I cannot wait to see the future of AI rendered graphics!
+
+> PS: This post was not sponsorsed by Nvidia, I just really love their technology. Would be cool if it was tho :)
