@@ -284,7 +284,7 @@ export default function Home({ articles }) {
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/pratham-prasoon-06900718a/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
