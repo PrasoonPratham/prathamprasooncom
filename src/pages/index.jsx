@@ -265,7 +265,7 @@ export default function Home({ articles }) {
             Software developer, tweleb, and a computer scientist in the making.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Yo, I'm Pratham! An 18 year-old that loves to work with technology.
+            Yo, I&apos;m Pratham! An 18 year-old that loves to work with technology.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
