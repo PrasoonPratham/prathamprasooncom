@@ -265,21 +265,21 @@ export default function Home({ articles }) {
             Software developer, tweleb, and a computer scientist in the making.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Yo, I'm Pratham!
+            Yo, I'm Pratham! An 18 year-old that loves to work with technology.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
+              href="https://twitter.com/PrasoonPratham"
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com"
+              href="https://instagram.com/PrasoonPratham"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/PrasoonPratham"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
