@@ -250,22 +250,28 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>
-          Pratham Prasoon - Software developer, tweleb, and a computer scientist
-          in the making.
-        </title>
+        <title>Pratham Prasoon - Software Engineer.</title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I'm Pratham! An 18 year-old that loves to work with
+            technology, everything from modular blockchains to AI and computing
+            hardware."
         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software developer, tweleb, and a computer scientist in the making.
+            Pikachu fan, techologist, twitteroor, and a computer scientist in the
+            making.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Yo, I&apos;m Pratham! An 18 year-old that loves to work with technology.
+            gm, I&apos;m Pratham! An 18 year-old that loves to work with
+            technology—everything from modular blockchains to AI and computing
+            hardware. I work at Eclipse as a Software Engineer where I&apos;m
+            helping build customizable Solana roll-up technology. I also work on
+            a few side projects, including playing around with Celestia&apos;s
+            data availability tech along with building neural networks using
+            PyTorch.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
